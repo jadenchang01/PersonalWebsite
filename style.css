@@ -1,0 +1,478 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+/* <-----------------Header-----------------> */
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),
+                        url(images/Halla.JPG);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.nameheader{
+    display:flex;
+    padding: 2% 6%;
+    justify-content:space-between;
+    align-items:center;
+}
+.nameheader a{
+    color: #fff;
+    text-decoration:none;
+    font-size: 35px;
+    font-weight: 500;
+}
+nav{
+    display:flex;
+    padding: 2% 6%;
+    justify-content:space-between;
+    align-items:center;
+}
+nav img{
+    width:150px;
+}
+.nav-links{
+    flex: 1;
+    text-align:right;
+}
+.nav-links ul li{
+    list-style:none;
+    display:inline-block;
+    padding: 8px 20px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration:none;
+    font-size: 23px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #dce4f3;
+    display:block;
+    margin: auto;
+    transition: 0.5s
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 35px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #fff;
+}
+/* <-----------------Header-----------------> */
+
+
+/* <----------------- Education -----------------> */
+/* timeline */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    width:80%;
+    text-align:center;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+.timeline h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+.timeline h2{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+.timeline h4{
+    color: #777;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+.timeline li{
+    position: relative;
+    color: gray;
+    text-decoration:none;
+    font-size: 12px;
+    text-align: left;
+}
+ul {
+    list-style-type: disc;
+    padding-left: 40px; 
+}
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #253046;
+    top: 180px; 
+    bottom: 100px;
+    left: 50%;
+    margin-left: -3px;
+}  
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #fff;
+    border: 4px solid #6e93a6;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+/* Place the container to the left */
+.left {
+    left: -7%;
+}
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #dce4f3;
+}
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #dce4f3 transparent transparent;
+}
+.right::after {
+    left: -16px;    
+}
+.content {
+    padding: 20px 30px;
+    background-color: #dce4f3; 
+    position: relative;
+    border-radius: 6px;
+}
+.resume{
+    width: 100%;
+    height: 250px;
+    padding: 40px;
+    margin-top:-30px;
+    text-align:center;
+    background: #253046;
+    align-items: center;
+}
+.resume h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #dbd9d9;
+}
+.resume .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:#dbd9d9;
+    border: 1px solid #dbd9d9;
+    margin-top: 80px;
+    padding: 12px 34px;
+    font-size: 13px;
+    width: 80px;
+    background:transparent;
+    position: relative;
+    cursor: pointer;
+}
+.resume .hero-btn:hover{
+    border: 1px solid #dce4f3;
+    color:#000;
+    background: #dce4f3;
+    opacity: 1;
+    transition: 1s
+}
+.education{
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    text-align:center;
+    background: #6e93a6;
+    align-items: center;
+}
+.education h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+.education p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    padding: 10 10 10 10;
+    width: 680px;
+}
+.col{
+    display: flex;
+    gap: 30px; 
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+.edu-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px 50px 50px;
+}
+/* <----------------- Education -----------------> */
+
+
+/* <----------------- Projects -----------------> */
+.papers{
+    width:90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.papers h1{
+    font-size: 36px;
+    font-weight: 600;
+    font-size: 40px;
+    color: #000;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+.papers-row {
+    background: #253046; 
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+.papers-row img {
+    width: 40%; /* Ensure the image fits within its container */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 10px 0 0 10px; /* Adjust to round left corners */
+    margin-right: 20px; /* Space between image and text */
+}
+.text-content {
+    display: flex;
+    flex-direction: column;
+    text-align: right; /* Align text to the right */
+    flex: 1; /* Allow text to take the remaining space */
+}
+.papers-row p{
+    padding: 100;
+}
+.papers-row:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    background: #c4d1e8; 
+}
+.papers-row:hover h3{
+    color: #000;
+}
+.papers-row:hover p{
+    color: #000;
+}
+.papers-row h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: right;
+    color: #dbd9d9;
+}
+.papers-row p{
+    color: #dbd9d9;
+}
+/* <----------------- Projects -----------------> */
+
+
+/* <----------------- Personal Record -----------------> */
+.record{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.hob-row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding-top: 10px;
+    /* margin-bottom: 20px;
+    gap: 10px; */
+}
+.hobs-row {
+    height: 350px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 25%; 
+    background-repeat: no-repeat;
+}
+.hobs-row p{
+    margin-bottom: 15px;
+    color: #dbd9d9;
+    text-align: center;
+    z-index: 1;
+}
+.hobs-row h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #dbd9d9;
+    font-size: 22px;
+    z-index: 1;
+}
+.text-content ul {
+    padding-left: 20px; 
+    list-style-type: disc; 
+    margin: 0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.text-content ul li {
+    text-align: left;
+    margin-bottom: 10px;
+    color: #dbd9d9;
+    font-size: 15px;
+}
+.hob-row .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:#151572;
+    border: 1px solid #151572;
+    padding: 12px 34px;
+    font-size: 13px;
+    background:#d9d9d9;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.hob-row .hero-btn:hover{
+    border: 1px solid #dce4f3;
+    background: #dce4f3;
+    opacity: 1;
+    transition: 1s
+}
+/* Individual background classes */
+.hobs-row.item1 {
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),url('images/books.webp');
+    object-fit: fill;
+    display: flex;
+    flex-direction: column;
+}
+.hobs-row.item2 {
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),url('images/map.webp');
+    object-fit: fill;
+    display: flex;
+    flex-direction: column;
+}
+/* <----------------- Personal Record -----------------> */
+
+
+/* <----------------- Footer -----------------> */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: #d9d9d9;
+    align-items: center;
+}
+.footer h3{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.footer p{
+    color: #777;
+    font-size: 16px;
+}
+.footer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.icons p {
+    margin-left: 0;
+}
+.icons .fa-brands{
+    color: #253046;
+    margin: 0 20px;
+    cursor: pointer;
+    padding: 18px 0; 
+    font-size: 20px;
+}
+.icons .fa-regular{
+    color: #253046;
+    margin-right: 0;
+    padding: 18px 0; 
+    font-size: 20px;
+}
+/* <----------------- Footer -----------------> */

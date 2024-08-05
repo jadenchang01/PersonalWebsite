@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jaden Chang</title> 
+        <link rel="stylesheet" href="leaflet/leaflet.css" />
+        <script src="leaflet/leaflet.js"></script>
+        <style>
+            #map {position: absolute; top: 0; bottom: 0; left: 0; right:0;}
+
+            .leaflet-popup-content-wrapper{
+                border-radius: 0;
+                background: #000;
+                color: white;
+                font-size: 15px;
+            }
+            .leaflet-popup-content{
+                margin: 5px;
+            }
+            .leaflet-popup-tip{
+                background: #000;
+            }
+            .leaflet-popup-content img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin-top: 10px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            // basic map set up
+            var map = L.map('map').setView([36, 126.9918], 7);
+            L.tileLayer('https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=t9eDBesBnqgrRawGrG0T', {
+                license: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+            }).addTo(map);
+
+            // markers
+            var seoraksan = L.marker([38.1196, 128.4656]).addTo(map);
+            const seorak_comment = `Mt.<b>Seorak</b> <br>  
+                        Very difficult hike with at least two days expected to reach the top.
+                        I hiked when I was in middle school with my dad, and this was my first
+                        time spending the night on the mountain.<img src="images/seorak.webp" />`;
+            seoraksan.bindPopup(seorak_comment);
+
+            var hallasan = L.marker([33.3617, 126.5292]).addTo(map);
+            const halla_comment = `Mt.<b>Halla</b> <br>  
+                        The tallest mountain in South Korea located at Jeju island.
+                        For me, the most fascinating part of hiking this mountain
+                        is that as the elevation changes, you can see the vegetation changing drastically.
+                        The cover photo has also been taken here.<img src="images/halla.jpg" />`;
+            hallasan.bindPopup(halla_comment);
+
+            var jirisan = L.marker([35.33137, 127.61993]).addTo(map);
+            const jiri_comment = `Mt.<b>Jiri</b> <br>  
+                        This is closer to a mountain range than a single mountain, and hikers often
+                        follow the trail along this mountain range, usually over three nights. I
+                        found this hike to be the most physically demanding as the trail randomly changes between steep incline
+                        and down hills.<img src="images/jiri.jpg" />`;
+            jirisan.bindPopup(jiri_comment);
+
+            var sobaeksan = L.marker([36.9575, 128.4849]).addTo(map);
+            const sobaeksan_comment = `Mt.<b>Sobaek</b> <br>  
+                        I personally have the most memory here because not only is this our family's favorite  
+                        camping spot but also it has one of the most gentle trails so all of our family can enjoy 
+                        hiking here as we talk along the way. <img src="images/sobaeksan.jpg" />`;
+            sobaeksan.bindPopup(sobaeksan_comment);
+
+            var cheonggyesan = L.marker([37.4142, 127.0416]).addTo(map);
+            const cheonggyesan_comment = `Mt.<b>Cheonggye</b> <br>  
+                        This is the closest mountain located at the border of Seoul and Gyungido.
+                        Due to its accessibility, we often visit here whenever we are tired of 
+                        Seoul's intensive pollution. However, since this mountain is closer to soil-based, rather
+                        than rock-based, the surface becomes very muddy during the monsoon season. <img src="images/cheonggyesan.jpeg" />`;
+            cheonggyesan.bindPopup(cheonggyesan_comment);
+
+            map.on('popupopen', function(e) {
+                var px = map.project(e.popup._latlng); 
+                px.y -= e.popup._container.clientHeight / 0.9; 
+                map.panTo(map.unproject(px), {animate: true});
+            });
+
+            // L.TiltHandler = L.Handler.extend({
+            //     addHooks: function() {
+            //         L.DomEvent.on(window, 'deviceorientation', this._tilt, this);
+            //     },
+
+            //     removeHooks: function() {
+            //         L.DomEvent.off(window, 'deviceorientation', this._tilt, this);
+            //     },
+
+            //     _tilt: function(ev) {
+            //         // Treat Gamma angle as horizontal pan (1 degree = 1 pixel) and Beta angle as vertical pan
+            //         this._map.panBy( L.point( ev.gamma, ev.beta ) );
+            //     }
+            // });
+        </script>
+
+    </body>
+</html>
+
