@@ -4,11 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jaden Chang</title> 
-        <link rel="stylesheet" href="leaflet/leaflet.css" />
-        <script src="leaflet/leaflet.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
         <style>
             #map {position: absolute; top: 0; bottom: 0; left: 0; right:0;}
-
             .leaflet-popup-content-wrapper{
                 border-radius: 0;
                 background: #000;
@@ -30,6 +33,7 @@
             }
         </style>
     </head>
+    
     <body>
         <div id="map"></div>
         <script>
@@ -78,26 +82,33 @@
                         than rock-based, the surface becomes very muddy during the monsoon season. <img src="images/cheonggyesan.jpeg" />`;
             cheonggyesan.bindPopup(cheonggyesan_comment);
 
+            var inwangsan = L.marker([37.5849, 126.9593]).addTo(map);
+            const inwangsan_comment = `Mt.<b>Inwang</b> <br>  
+                        This mountain is located at downtown Seoul, within the perimeter of the blue house
+                        where it used to be the presidential office. With its relatively gentle slope, it attracts
+                        a lot of high school field trips and casual hikers. As you walk along, you can see the skyline of 
+                        Seoul and Han river as it divides the city across. <img src="images/inwangsan.jpg" />`;
+            inwangsan.bindPopup(inwangsan_comment);
+
+            var wolchulsan = L.marker([34.7743, 126.7105]).addTo(map);
+            const wolchulsan_comment = `Mt.<b>Wolchul</b> <br>  
+                        I hiked this mountain when our family toured around the end of Korean peninsula. 
+                        While its elevation is lower than its counterparts I hiked, the trail is extremely
+                        rocky and steep. It is famous for cloud bridge that also scared me a lot. <img src="images/wolchulsan.jpg" />`;
+            wolchulsan.bindPopup(wolchulsan_comment);
+
+            var odaesan = L.marker([37.7981, 128.5430]).addTo(map);
+            const odaesan_comment = `Mt.<b>Odae</b> <br>  
+                        Whenever out family visits Pyeongchang, we always visit this mountain for its cedar-tree trail that walks 
+                        along the narrow river coming down from the mountain. Not only is it tranquil but, especially at winter when trees 
+                        are covered in snow, the scenery is surreal. <img src="images/odaesan.jpg" />`;
+            odaesan.bindPopup(odaesan_comment);
+
             map.on('popupopen', function(e) {
                 var px = map.project(e.popup._latlng); 
-                px.y -= e.popup._container.clientHeight / 0.9; 
+                px.y -= e.popup._container.clientHeight; 
                 map.panTo(map.unproject(px), {animate: true});
             });
-
-            // L.TiltHandler = L.Handler.extend({
-            //     addHooks: function() {
-            //         L.DomEvent.on(window, 'deviceorientation', this._tilt, this);
-            //     },
-
-            //     removeHooks: function() {
-            //         L.DomEvent.off(window, 'deviceorientation', this._tilt, this);
-            //     },
-
-            //     _tilt: function(ev) {
-            //         // Treat Gamma angle as horizontal pan (1 degree = 1 pixel) and Beta angle as vertical pan
-            //         this._map.panBy( L.point( ev.gamma, ev.beta ) );
-            //     }
-            // });
         </script>
 
     </body>
