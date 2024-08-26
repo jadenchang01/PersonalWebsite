@@ -9,7 +9,7 @@
     min-height: 100vh;
     width: 100%;
     background-image:linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),
-                        url(images/Halla.JPG);
+                        url(Images/Halla.JPG);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -98,6 +98,7 @@ nav img{
 }
 .about-col img{
     max-width: 100%;
+    max-height: 82%;
     margin-left: 100px;
     text-align: center;
 }
@@ -109,7 +110,8 @@ nav img{
 .about-row {
     display: flex;
     justify-content: space-between;
-    margin-top: 2%;
+    margin-top: -4%;
+    margin-bottom: -3%;
 }
 /* <----------------- About Me -----------------> */
 
@@ -233,6 +235,7 @@ ul {
     width: 100%;
     height: 250px;
     padding: 40px;
+    box-sizing: border-box;
     margin-top:-30px;
     text-align:center;
     background: #253046;
@@ -267,6 +270,7 @@ ul {
     width: 100%;
     height: 300px;
     padding: 20px;
+    box-sizing: border-box;
     text-align:center;
     background: #6e93a6;
     align-items: center;
@@ -382,9 +386,6 @@ ul {
     flex-direction: column;
     width: 100%;
     margin: auto;
-    padding-top: 10px;
-    /* margin-bottom: 20px;
-    gap: 10px; */
 }
 .hobs-row {
     height: 350px;
@@ -447,13 +448,13 @@ ul {
 }
 /* Individual background classes */
 .hobs-row.item1 {
-    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),url('images/books.webp');
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),url('Images/books.webp');
     object-fit: fill;
     display: flex;
     flex-direction: column;
 }
 .hobs-row.item2 {
-    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),url('images/map.webp');
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),url('Images/map.webp');
     object-fit: fill;
     display: flex;
     flex-direction: column;
