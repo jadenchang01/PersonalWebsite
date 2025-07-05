@@ -505,88 +505,400 @@ ul {
 
 
 /* <----------------- Personal Record -----------------> */
-.record{
-    width: 100%;
-    margin: auto;
-    text-align: center;
+.personal-stories {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
 }
-.hob-row{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: auto;
+.stories-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.hobs-row {
-    height: 350px;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: background-color 0.5s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: 25%; 
-    background-repeat: no-repeat;
+.stories-header h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #253046;
+  margin-bottom: 20px;
 }
-.hobs-row p{
-    margin-bottom: 15px;
-    color: #dbd9d9;
-    text-align: center;
-    z-index: 1;
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background-color: #6e93a6;
+  margin: 0 auto 30px auto;
 }
-.hobs-row h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: center;
-    color: #dbd9d9;
-    font-size: 22px;
-    z-index: 1;
+.stories-header p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.6;
 }
-.text-content ul {
-    padding-left: 20px; 
-    list-style-type: disc; 
-    margin: 0;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    align-items: center;
+.stories-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
-.text-content ul li {
-    text-align: left;
-    margin-bottom: 10px;
-    color: #dbd9d9;
-    font-size: 15px;
+.featured-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
-.hob-row .hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color:#151572;
-    border: 1px solid #151572;
-    padding: 12px 34px;
-    font-size: 13px;
-    background:#d9d9d9;
-    opacity: 0.5;
-    cursor: pointer;
+.secondary-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
 }
-.hob-row .hero-btn:hover{
-    border: 1px solid #dce4f3;
-    background: #dce4f3;
-    opacity: 1;
-    transition: 1s
+/* Card Base Styles */
+.story-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: translateY(30px);
 }
-/* Individual background classes */
-.hobs-row.item1 {
-    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),url('Images/books.webp');
-    object-fit: fill;
-    display: flex;
-    flex-direction: column;
+.story-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
-.hobs-row.item2 {
-    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),url('Images/map.webp');
-    object-fit: fill;
-    display: flex;
-    flex-direction: column;
+.story-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(37, 48, 70, 0.2);
+}
+/* Card Size Variants */
+.large-card {
+  height: 550px;
+}
+.medium-card {
+  height: 400px;
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 48, 70, 0.85) 0%, rgba(110, 147, 166, 0.75) 100%);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  overflow: hidden;
+}
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+.card-icon {
+  margin-bottom: 15px;
+}
+.card-icon i {
+  font-size: 2.5rem;
+  color: #dce4f3;
+  background: rgba(220, 228, 243, 0.2);
+  padding: 15px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-header h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  color: #dce4f3;
+  margin: 0;
+}
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f8f9fa;
+  flex-shrink: 0;
+}
+/* Reading Card Specific Styles */
+.reading-card {
+  background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
+    url("Images/books.webp");
+}
+.book-recommendations {
+  flex: 1;
+  overflow: hidden;
+}
+.book-recommendations h4 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #dce4f3;
+  text-align: center;
+  flex-shrink: 0;
+}
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.book-list li {
+  background: rgba(220, 228, 243, 0.1);
+  margin-bottom: 6px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  border-left: 3px solid #6e93a6;
+  line-height: 1.3;
+}
+/* Hiking Card Specific Styles */
+.hiking-card {
+  background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
+    url("Images/map.webp");
+}
+.hiking-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-shrink: 0;
+}
+.stat-item {
+  text-align: center;
+  background: rgba(220, 228, 243, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  margin: 0 5px;
+}
+.stat-number {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #dce4f3;
+}
+.stat-label {
+  font-size: 0.85rem;
+  color: #f8f9fa;
+}
+.story-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(220, 228, 243, 0.9);
+  color: #253046;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  justify-content: center;
+  margin-top: auto;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.story-btn:hover {
+  background: #dce4f3;
+  transform: translateY(-2px);
+}
+/* Journey Card Specific Styles */
+.journey-card {
+  background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
+    url("Images/map.webp");
+}
+.journey-highlights {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(220, 228, 243, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 60px;
+}
+.highlight-item i {
+  font-size: 1.2rem;
+  color: #dce4f3;
+  margin-bottom: 5px;
+}
+.highlight-item span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+/* Sports Card Specific Styles */
+.sports-card {
+  background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
+    url("Images/map.webp");
+}
+.sports-categories {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.sports-section {
+  background: rgba(220, 228, 243, 0.05);
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid rgba(220, 228, 243, 0.1);
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  justify-content: center;
+}
+.section-title i {
+  font-size: 0.9rem;
+  color: #dce4f3;
+}
+.section-title span {
+  font-size: 0.85rem;
+  color: #dce4f3;
+  font-weight: 600;
+}
+.sports-icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+}
+.sport-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+.sport-item:hover {
+  transform: translateY(-2px);
+}
+.sport-item i {
+  font-size: 1.1rem;
+  color: #dce4f3;
+  background: rgba(220, 228, 243, 0.1);
+  padding: 8px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.sport-item span {
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.1;
+  color: #f8f9fa;
+}
+.sport-item:hover i {
+  background: rgba(220, 228, 243, 0.2);
+  transform: scale(1.05);
+}
+/* Music Card Specific Styles */
+.music-card {
+  background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
+    url("Images/map.webp");
+}
+.music-categories {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.music-section h5 {
+  font-size: 0.9rem;
+  color: #dce4f3;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+.music-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+.music-tag {
+  background: rgba(220, 228, 243, 0.2);
+  color: #dce4f3;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(220, 228, 243, 0.3);
+}
+.music-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: auto;
+}
+.genre-tag {
+  background: rgba(220, 228, 243, 0.2);
+  color: #dce4f3;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(220, 228, 243, 0.3);
+}
+/* Photography Card Specific Styles */
+.photography-card {
+  background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
+    url("Images/map.webp");
+}
+.photo-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+  gap: 10px;
+}
+.photo-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(220, 228, 243, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  flex: 1;
+}
+.photo-stat i {
+  font-size: 1.2rem;
+  color: #dce4f3;
+  margin-bottom: 5px;
+}
+.photo-stat span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
 }
 /* <----------------- Personal Record -----------------> */
 
