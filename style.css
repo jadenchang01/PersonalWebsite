@@ -670,7 +670,7 @@ ul {
 /* Hiking Card Specific Styles */
 .hiking-card {
   background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
-    url("Images/map.webp");
+    url("Images/wolchulsan.jpg");
 }
 .hiking-stats {
   display: flex;
@@ -751,7 +751,7 @@ ul {
 /* Sports Card Specific Styles */
 .sports-card {
   background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
-    url("Images/map.webp");
+    url("Images/track.webp");
 }
 .sports-categories {
   margin-top: auto;
@@ -824,7 +824,7 @@ ul {
 /* Music Card Specific Styles */
 .music-card {
   background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
-    url("Images/map.webp");
+    url("Images/music.jpg");
 }
 .music-categories {
   margin-top: auto;
@@ -873,7 +873,7 @@ ul {
 /* Photography Card Specific Styles */
 .photography-card {
   background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
-    url("Images/map.webp");
+    url("Images/sobaeksan.jpg");
 }
 .photo-stats {
   display: flex;
