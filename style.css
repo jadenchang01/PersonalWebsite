@@ -26,29 +26,59 @@
     font-size: 35px;
     font-weight: 500;
 }
-nav{
-    display:flex;
-    padding: 2% 6%;
-    justify-content:space-between;
-    align-items:center;
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 80px; /* NEW: Minimum height for consistent spacing */
 }
-nav img{
-    width:150px;
+.nameheader {
+  flex-shrink: 0;
+  min-width: fit-content; /* NEW: Prevent compression of name */
 }
-.nav-links{
-    flex: 1;
-    text-align:right;
+.nameheader a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 500;
+  display: block;
+  white-space: nowrap; /* NEW: Keep name on single line */
 }
-.nav-links ul li{
-    list-style:none;
-    display:inline-block;
-    padding: 8px 20px;
-    position: relative;
+.nav-links {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 0; /* NEW: Allow flex item to shrink if needed */
 }
-.nav-links ul li a{
-    color: #fff;
-    text-decoration:none;
-    font-size: 23px;
+.nav-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* NEW: Allow wrapping on very small screens */
+}
+.nav-links ul li {
+  display: inline-block;
+  padding: 8px 20px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 23px;
+  display: block;
+  white-space: nowrap; /* NEW: Keep nav text on single line */
 }
 .nav-links ul li::after{
     content: '';
@@ -1192,41 +1222,71 @@ ul {
 
 /* Tablets (768px and below) */
 @media screen and (max-width: 768px) {
-  /* Header Adjustments */
+  /* Header Adjustments - MAJOR FIXES */
   nav {
     flex-direction: column;
-    gap: 20px;
-    padding: 3% 4%;
-    position: relative;
+    gap: 15px; /* NEW: Reduced gap for tighter spacing */
+    padding: 20px 15px; /* NEW: Fixed padding for consistent spacing */
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* NEW: Remove any potential overflow */
+    overflow: hidden; /* NEW: Prevent content overflow */
+    width: 100%; /* NEW: Ensure full width coverage */
+    box-sizing: border-box; /* NEW: Include padding in width calculation */
+  }
+
+  .nameheader {
+    order: 1;
+    /* NEW: Ensure proper centering */
+    width: 100%; /* NEW: Full width for perfect centering */
+    text-align: center; /* NEW: Center the name */
   }
 
   .nameheader a {
-    font-size: 28px;
+    font-size: 26px; /* NEW: Slightly smaller for mobile */
+    /* NEW: Ensure no overflow */
+    display: inline-block; /* NEW: Better control over spacing */
   }
 
   .nav-links {
+    order: 2;
     text-align: center;
+    justify-content: center;
+    /* NEW: Full width for proper centering */
+    width: 100%; /* NEW: Take full width */
+  }
+
+  .nav-links ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    /* NEW: Remove any margins that could cause spacing issues */
+    margin: 0; /* NEW: Reset margins */
+    padding: 0; /* NEW: Reset padding */
+    width: 100%; /* NEW: Full width */
   }
 
   .nav-links ul li {
-    padding: 6px 15px;
+    padding: 5px 12px; /* NEW: Reduced padding for mobile */
   }
 
   .nav-links ul li a {
-    font-size: 18px;
+    font-size: 16px; /* NEW: Smaller font for mobile */
   }
 
   .text-box {
-    top: 70%;
+    top: 75%; /* NEW: Adjusted position to account for nav changes */
     width: 95%;
   }
 
   .text-box h1 {
-    font-size: 28px;
+    font-size: 26px; /* NEW: Adjusted for mobile */
   }
 
   .text-box p {
-    font-size: 16px;
+    font-size: 15px; /* NEW: Adjusted for mobile */
   }
 
   /* About Me Adjustments */
@@ -1269,7 +1329,6 @@ ul {
     font-size: 1.6rem;
   }
 
-  /* Timeline Adjustments */
   .timeline {
     width: 95%;
     padding-top: 60px;
@@ -1386,35 +1445,57 @@ ul {
     font-size: 1.4rem;
   }
 }
-/* Mobile Phones (480px and below) */
+
+/* Mobile Phones (480px breakpoint) - MAJOR SPACING FIXES */
 @media screen and (max-width: 480px) {
-  /* Header Adjustments */
+  /* Header Adjustments - CRITICAL FIXES */
   nav {
-    padding: 4% 3%;
+    padding: 15px 10px; /* NEW: Minimal padding to prevent black space */
+    gap: 10px; /* NEW: Tight gap */
+    /* NEW: Ensure no height issues */
+    min-height: auto; /* NEW: Remove fixed height */
   }
+
   .nameheader a {
-    font-size: 24px;
+    font-size: 22px; /* NEW: Smaller for very small screens */
   }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 3px; /* NEW: Very tight spacing */
+    /* NEW: Ensure no extra space */
+    align-items: center; /* NEW: Perfect centering */
+  }
+
   .nav-links ul li {
     display: block;
-    padding: 8px 0;
+    padding: 6px 0; /* NEW: Minimal vertical padding */
     text-align: center;
+    width: 100%;
+    /* NEW: Remove any margins */
+    margin: 0; /* NEW: No margins */
   }
+
   .nav-links ul li a {
-    font-size: 16px;
+    font-size: 15px; /* NEW: Smaller font */
+    /* NEW: Ensure proper spacing */
+    padding: 4px 8px; /* NEW: Minimal padding */
   }
+
   .text-box {
-    top: 65%;
+    top: 70%; /* NEW: Adjusted for tighter nav */
     width: 95%;
   }
 
   .text-box h1 {
-    font-size: 24px;
+    font-size: 22px; /* NEW: Smaller for mobile */
     line-height: 1.2;
   }
 
   .text-box p {
     font-size: 14px;
+    /* NEW: Better line height for mobile */
+    line-height: 1.4; /* NEW: Improved readability */
   }
 
   /* About Me Adjustments */
