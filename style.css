@@ -1044,32 +1044,34 @@ ul {
 /* Photography Card Specific Styles */
 .photography-card {
   background-image: linear-gradient(rgba(37, 48, 70, 0.3), rgba(37, 48, 70, 0.6)),
-    url("Images/sobaeksan.jpg");
+    url("Images/dance.jpg");
 }
-.photo-stats {
-  display: flex;
-  justify-content: space-around;
-  margin-top: auto;
-  gap: 10px;
-}
-.photo-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(220, 228, 243, 0.1);
-  padding: 12px;
-  border-radius: 8px;
-  flex: 1;
-}
-.photo-stat i {
-  font-size: 1.2rem;
-  color: #dce4f3;
-  margin-bottom: 5px;
-}
-.photo-stat span {
-  font-size: 0.8rem;
-  font-weight: 500;
+.dance-link {
+  margin-top: auto; /* Pushes the button to the bottom */
   text-align: center;
+  flex-shrink: 0;
+  padding-top: 15px; /* Spacing above the button */
+}
+.card-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #f8f9fa; /* Light background for visibility */
+  color: #253046; /* Dark text from the card overlay background */
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.card-button i {
+  margin-right: 8px;
+  color: #ff0000; /* YouTube's signature red */
+}
+.card-button:hover {
+  background-color: #dce4f3; /* Slight change on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 /* <----------------- Personal Record -----------------> */
 
