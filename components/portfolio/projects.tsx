@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Family Atlas",
     description: "Rescuing digital archives from unorganized mess, this desktop app transforms family trip images on your desktop into an intuitive, map-integrated gallery. It pairs a multi-class LDA model trained on CV data with optimized geospatial caching.",
-    image: "/Images/FamilyAtlas.png",
+    image: "/PersonalWebsite/Images/FamilyAtlas.png",
     link: "https://github.com/jadenchang01/FamilyAtlas",
     isPaper: false,
     technologies: ["Python", "Machine Learning", "Computer Vision"],
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Integrated Artillery Maintenance System",
     description: "I led a four-member team to develop an artillery maintenance-forecast platform predicting quarterly part demand. Placed 1st place out of 144 teams in the Applied Data Science Competition.",
-    image: "/Images/k9.jpg",
+    image: "/PersonalWebsite/Images/k9.jpg",
     link: "https://github.com/jadenchang01/IAMS",
     isPaper: false,
     technologies: ["Data Science", "UI/UX", "React", "Team Project"],
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Personal Portfolio Website",
     description: "The website you are viewing was developed entirely using HTML, CSS, and JavaScript. Now redesigned with Next.js and Tailwind CSS.",
-    image: "/Images/Halla.JPG",
+    image: "/PersonalWebsite/Images/Halla.JPG",
     link: "https://github.com/Jaden-5/PersonalWebsite",
     isPaper: false,
     technologies: ["Next.js", "React", "HTML/CSS", "JavaScript"],
@@ -30,7 +30,7 @@ const projects = [
   {
     title: "CedarStone Website Development",
     description: "Contributed to developing the homepage for a start-up business consulting firm using modern web development practices.",
-    image: "/Images/cslogo.png",
+    image: "/PersonalWebsite/Images/cslogo.png",
     link: "https://cedarstone.co.kr",
     isPaper: false,
     technologies: ["Web Development", "UI/UX", "Collaboration"],
@@ -38,7 +38,7 @@ const projects = [
   {
     title: "King of the Pacific (15112 Term Project)",
     description: "Play an online version of Battleship board game with an algorithm of different levels of difficulty.",
-    image: "/Images/startbgcopy.jpeg",
+    image: "/PersonalWebsite/Images/startbgcopy.jpeg",
     link: "https://github.com/Jaden-5/TermProject",
     isPaper: false,
     technologies: ["Python", "Game Development"],
@@ -46,7 +46,7 @@ const projects = [
   {
     title: "Avoid The Rush (Hack 112)",
     description: "Move nearby cars, trucks, and buses to free the red car. Developed in 24 hours with my team for a hackathon.",
-    image: "/Images/starterimage copy.jpeg",
+    image: "/PersonalWebsite/Images/starterimage copy.jpeg",
     link: "https://github.com/Jaden-5/AvoidTheRush",
     isPaper: false,
     technologies: ["Python", "Hackathon"],
@@ -57,7 +57,7 @@ const papers = [
   {
     title: "Exploring Turing's Argument: Can Machines Think?",
     description: "Evaluates Alan Turing's argument of whether machines can think within the framework of modern artificial intelligence.",
-    image: "/Images/ai.jpg",
+    image: "/PersonalWebsite/Images/ai.jpg",
     link: "https://drive.google.com/file/d/1lOG3m-Is2u0cQTg0OeIVtO7rsXPg2BO9/view?usp=drive_link",
     isPaper: true,
     technologies: ["AI", "Philosophy", "Computer Science"],
@@ -65,7 +65,7 @@ const papers = [
   {
     title: "What is the Relationship between Justice and Law?",
     description: "Elucidates the distance between law and justice through looking at historical precedents of Jim Crow laws, court cases, along with contemporary inequity.",
-    image: "/Images/law.jpeg",
+    image: "/PersonalWebsite/Images/law.jpeg",
     link: "https://drive.google.com/file/d/176Ul_WgTL4Qj3BgKZ_MGBxZ1hr-NkKbr/view?usp=drive_link",
     isPaper: true,
     technologies: ["Philosophy", "Law", "Ethics"],
@@ -73,7 +73,7 @@ const papers = [
   {
     title: "Energy Poverty and Human Rights: A Candle of Hope for Mankind",
     description: "Addresses the missing link between the international economic gap and deprivation of human rights in impoverished regions via a holistic literature review.",
-    image: "/Images/energy.webp",
+    image: "/PersonalWebsite/Images/energy.webp",
     link: "https://drive.google.com/file/d/1TI1p1IMShNA5mYAwMobrTpSoQSLzPo9K/view?usp=drive_link",
     isPaper: true,
     technologies: ["Human Rights", "Energy Policy", "Research"],

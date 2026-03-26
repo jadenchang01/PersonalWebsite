@@ -8,7 +8,7 @@ const geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Jaden Chang | Portfolio',
-  description: 'Interdisciplinary Learner & Data Science Enthusiast',
+  description: 'Data Analyst & Interdisciplinary Builder. <br /> Curious About Everything.',
   generator: 'v0.app',
   icons: {
     icon: [

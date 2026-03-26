@@ -12,7 +12,7 @@ export function About() {
         <div className="shrink-0">
           <div className="relative w-32 h-32 md:w-48 md:h-48 overflow-hidden rounded-full border-4 border-card/50">
             <Image
-              src="/Images/profile.jpeg"
+              src="/PersonalWebsite/Images/profile.jpeg"
               alt="Jaden Chang"
               fill
               className="object-cover"

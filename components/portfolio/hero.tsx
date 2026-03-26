@@ -17,7 +17,7 @@ export function Hero() {
           Jaden Chang
         </h1>
         <p className="text-xl md:text-2xl text-primary font-medium">
-          Data Analyst & Interdisciplinary Builder. Curious About Everything.
+          Data Analyst & Interdisciplinary Builder. <br /> Curious About Everything.
         </p>
       </div>
 
