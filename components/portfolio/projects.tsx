@@ -5,11 +5,11 @@ import Image from "next/image"
 const projects = [
   {
     title: "Family Atlas",
-    description: "Rescuing digital archives from unorganized mess, this desktop app transforms family trip images on your desktop into an intuitive, map-integrated gallery. It pairs a multi-stage OpenCV filtering logic with optimized geospatial caching.",
+    description: "Rescuing digital archives from unorganized mess, this desktop app transforms family trip images on your desktop into an intuitive, map-integrated gallery. It pairs a multi-class LDA model trained on CV data with optimized geospatial caching.",
     image: "/Images/FamilyAtlas.png",
     link: "https://github.com/jadenchang01/FamilyAtlas",
     isPaper: false,
-    technologies: ["Python", "App Development", "Prompt Engineering"],
+    technologies: ["Python", "Machine Learning", "Computer Vision"],
   },
   {
     title: "Integrated Artillery Maintenance System",

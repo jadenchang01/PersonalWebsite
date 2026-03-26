@@ -4,8 +4,8 @@ import { Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/Jaden-5", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/inhwa-jaden-chang-461550298", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/jadenchang01/", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/inhwa-jaden-chang/", label: "LinkedIn" },
   { icon: Mail, href: "mailto:chang.ihj05@gmail.com", label: "Email" },
 ]
 
@@ -17,10 +17,7 @@ export function Hero() {
           Jaden Chang
         </h1>
         <p className="text-xl md:text-2xl text-primary font-medium">
-          Interdisciplinary Learner & Data Science Enthusiast
-        </p>
-        <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
-          I am drawn to the points of intersection where ideas converge. My work spans data science, web development, and strategy, uncovering patterns across seemingly unrelated domains.
+          Data Analyst & Interdisciplinary Builder. Curious About Everything.
         </p>
       </div>
 

@@ -30,13 +30,10 @@ export function About() {
 
       <div className="space-y-4 text-muted-foreground leading-relaxed flex flex-col">
         <p>
-          I recognize that this is a very broad and ambiguous statement. Therefore, in hopes of better describing who I am beyond the rigid framework of resumes and CVs, this website illustrates the intersections that define my journey: where game development merges with strategic thinking; where quantitative modeling meets nuanced textual analysis; and where professional rigor on campus connects to the grounding clarity of hiking mountains off campus.
+          In hopes of better describing who I am beyond the rigid framework of resumes and CVs, this website illustrates the intersections that define my journey: where app development merges with strategic thinking; where quantitative modeling meets image analysis; and where professional rigor on campus connects to relaxed hiking off campus.
         </p>
         <p>
-          I thoughtfully designed and implemented every element of the website, including the overall layout, the color scheme, and contents.
-        </p>
-        <p>
-          With the basic idea of this website in mind, I invite you to explore each section of my website, which I hope will reveal a clearer portrait of who I am.
+          With the basic idea of this website in mind, I invite you to explore my website, which I hope will reveal a clearer portrait of who I am.
         </p>
       </div>
 

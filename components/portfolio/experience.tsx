@@ -3,20 +3,20 @@ import Link from "next/link"
 
 const experiences = [
   {
-    period: "June 2025 — Present",
-    title: "Head Translator",
-    company: "Republic of Korea Army Artillery School",
-    companyUrl: "#",
-    description: "Delivered translations on Tactics and Maintenance for 50+ officers from 5 countries at Korea-Army International Course. Led 8 translators in producing course materials and organizing rehearsals, ensuring structured course execution.",
-    technologies: ["Professional", "Translation", "Leadership"],
-  },
-  {
-    period: "September 2024 — Present",
+    period: "September 2024 — March 2026",
     title: "Fire Data Analyst",
     company: "Republic of Korea Army Artillery School",
     companyUrl: "#",
     description: "Trained 600+ officers annually in analyzing meteorological and artillery-performance data to optimize artillery fire models. Managed data validation and analysis process in the battalion command system.",
     technologies: ["Professional", "Data Analysis", "Training"],
+  },
+  {
+    period: "June 2025 — December 2025",
+    title: "Head Translator",
+    company: "Republic of Korea Army Artillery School",
+    companyUrl: "#",
+    description: "Delivered translations on Tactics and Maintenance for 50+ officers from 5 countries at Korea-Army International Course. Led 8 translators in producing course materials and organizing rehearsals, ensuring structured course execution.",
+    technologies: ["Presentation", "Translation", "Leadership"],
   },
   {
     period: "September 2024 — December 2024",
