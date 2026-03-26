@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0f1419"/>
+  <text x="30" y="50" font-family="monospace" font-size="14" fill="#4b5563">$</text>
+  <text x="50" y="50" font-family="monospace" font-size="14" fill="#22c55e">npm install -g my-cli</text>
+  <text x="30" y="80" font-family="monospace" font-size="14" fill="#4b5563">$</text>
+  <text x="50" y="80" font-family="monospace" font-size="14" fill="#e5e7eb">my-cli init</text>
+  <text x="30" y="110" font-family="monospace" font-size="12" fill="#3b82f6">✓</text>
+  <text x="50" y="110" font-family="monospace" font-size="12" fill="#6b7280">Project initialized successfully</text>
+  <text x="30" y="140" font-family="monospace" font-size="14" fill="#4b5563">$</text>
+  <text x="50" y="140" font-family="monospace" font-size="14" fill="#e5e7eb">my-cli generate component</text>
+  <text x="30" y="170" font-family="monospace" font-size="12" fill="#eab308">?</text>
+  <text x="50" y="170" font-family="monospace" font-size="12" fill="#6b7280">Component name:</text>
+  <text x="180" y="170" font-family="monospace" font-size="12" fill="#06b6d4">Button</text>
+  <text x="30" y="200" font-family="monospace" font-size="12" fill="#3b82f6">✓</text>
+  <text x="50" y="200" font-family="monospace" font-size="12" fill="#6b7280">Created Button.tsx</text>
+  <text x="30" y="220" font-family="monospace" font-size="12" fill="#3b82f6">✓</text>
+  <text x="50" y="220" font-family="monospace" font-size="12" fill="#6b7280">Created Button.test.tsx</text>
+  <text x="30" y="240" font-family="monospace" font-size="12" fill="#3b82f6">✓</text>
+  <text x="50" y="240" font-family="monospace" font-size="12" fill="#6b7280">Created Button.stories.tsx</text>
+  <rect x="30" y="260" width="8" height="16" fill="#22c55e">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
